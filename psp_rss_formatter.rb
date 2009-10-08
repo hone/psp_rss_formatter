@@ -7,6 +7,6 @@ get '/' do
   haml :index
 end
 
-post '/feed/:feed_url' do
+post '/feed' do
   params[:feed_url]
 end
