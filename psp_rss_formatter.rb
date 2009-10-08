@@ -3,5 +3,5 @@ require 'sinatra'
 require 'nokogiri'
 
 get '/' do
-  puts 'Hello World!'
+  'Hello World!'
 end
