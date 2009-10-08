@@ -1,6 +1,6 @@
 = PSP RSS Formatter
 
-Code for http://evening-window-98.heroku.com/ .
+Code for http://psp-rss-formatter.heroku.com/ .
 
 == Problem
 
