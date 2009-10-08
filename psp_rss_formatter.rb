@@ -4,5 +4,5 @@ require 'nokogiri'
 require 'haml'
 
 get '/' do
-  'Hello World!'
+  haml :index
 end
