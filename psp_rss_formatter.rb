@@ -10,7 +10,14 @@ end
 
 get '/feed' do
   # process XML file
-  xml_doc = Nokogiri::XML.parse(open(params[:feed_url]))
+  feed = nil
+  begin
+    feed = open(params[:feed_url])
+  rescue Errno::ENOENT
+    return 'That is an invalid url.'
+  end
+
+  xml_doc = Nokogiri::XML.parse(feed)
   titles = xml_doc.search('item > title')
   titles.each do |title|
     title.content = title.content
