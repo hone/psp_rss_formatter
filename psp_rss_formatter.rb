@@ -2,11 +2,11 @@ require 'rubygems'
 require 'sinatra'
 require 'nokogiri'
 require 'haml'
+require 'open-uri'
 
 get '/' do
   haml :index
 end
 
-post '/feed' do
-  params[:feed_url]
+get '/feed' do
 end
