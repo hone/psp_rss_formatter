@@ -9,3 +9,16 @@ The Sony PSP RSS Channel app, can not handle <title> elements in the <item> node
 == Solution
 
 Using nokogiri to parse the RSS feed and replace the <title> element with a string representation of the CDATA information, the PSP will be able to save the data properly.  This is built on top of sinatra.  Now, people can point their PSP feeds to feeds based off of this app.
+
+== Contributors
+
+Terence Lee <hone02 AT gmail DOT com>
+Josh Roberts (for bug testing)
+
+== Copyright/Licensing
+
+Copyright © 2009 Terence Lee. See LICENSE for details.
+
+This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. 
