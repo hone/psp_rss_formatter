@@ -1,0 +1,11 @@
+= PSP RSS Formatter
+
+Code for http://evening-window-98.heroku.com/ .
+
+== Problem
+
+The Sony PSP RSS Channel app, can not handle <title> elements in the <item> node to be CDATA elements.  This sinatra app simply turns the CDATA information into a string.  The PSP won't be able to parse the title string, so it will name the mp3s, "-.mp3".  It checks to see if that file exists, which it will after the first feed, so you can not save more than one item per feed.
+
+== Solution
+
+Using nokogiri to parse the RSS feed and replace the <title> element with a string representation of the CDATA information, the PSP will be able to save the data properly.  This is built on top of sinatra.  Now, people can point their PSP feeds to feeds based off of this app.
