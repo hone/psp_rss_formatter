@@ -13,7 +13,7 @@ get '/feed' do
   feed = nil
   begin
     feed = open(params[:feed_url])
-  rescue Errno::ENOENT
+  rescue Errno::ENOENT, SocketError
     return 'That is an invalid url.'
   end
 
