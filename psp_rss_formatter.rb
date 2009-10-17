@@ -28,6 +28,7 @@ get '/' do
 end
 
 get '/feed' do
+  content_type("text/xml")
   # process XML file
   feed = nil
   begin
